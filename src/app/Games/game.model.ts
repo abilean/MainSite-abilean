@@ -1,10 +1,11 @@
 
 export class Game {
 
-    public constructor(private pstrName: string,
-                private pstrImgPath: string,
-                private pstrURL: string,
-                private plngID: number,
-                private pstrDescription: string ){}
+    public constructor(private mstrName: string,
+                private mstrImgPath: string,
+                private mstrURL: string,
+                private mlngID: number,
+                private mstrDescription1: string,
+                private mstrDescription2: string ){}
 
 }

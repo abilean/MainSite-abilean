@@ -9,6 +9,8 @@ import { MyCustomMaterialModule } from './myCustomMaterialModule';
 import { GamesMenuComponent } from './games/games-menu/games-menu.component';
 import { TutorialsMenuComponent } from './tutorials/tutorials-menu/tutorials-menu.component';
 import { WebfunMenuComponent } from './webfun/webfun-menu/webfun-menu.component';
+import { GameListService } from './Games/GameList.Service';
+import { GameItemComponent } from './games/game-item/game-item.component';
 
 const appRoutes : Routes = [
   {path : 'Games', component: GamesMenuComponent},
@@ -21,7 +23,8 @@ const appRoutes : Routes = [
     AppComponent,
     GamesMenuComponent,
     TutorialsMenuComponent,
-    WebfunMenuComponent
+    WebfunMenuComponent,
+    GameItemComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ const appRoutes : Routes = [
     MyCustomMaterialModule,
     RouterModule.forRoot (appRoutes, {enableTracing: true})
   ],
-  providers: [],
+  providers: [GameListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

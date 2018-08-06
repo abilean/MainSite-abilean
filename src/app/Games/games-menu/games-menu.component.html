@@ -1,4 +1,4 @@
-<p>
-  games-menu works!
-</p>
-<img src="assets/img/lightning.jpeg">
+
+<div *ngFor = "let game of mobjGames">
+  <app-game-item [mobjGame]='game'></app-game-item>
+</div>
